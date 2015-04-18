@@ -38,15 +38,17 @@ public class Samsies extends JFrame {
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
-		contentPane.setLayout(null);
 		
-		JButton btnNewButton = new JButton("New button");
+		final JButton btnNewButton = new JButton("Roll");
+		btnNewButton.setBounds(244, 199, 95, 54);
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				
+				System.out.println("Dice was rolled");
+				btnNewButton.setText("WTF");
 			}
 		});
-		btnNewButton.setBounds(244, 199, 95, 54);
+		contentPane.setLayout(null);
 		contentPane.add(btnNewButton);
 	}
 }
